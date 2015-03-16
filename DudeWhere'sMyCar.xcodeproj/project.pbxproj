@@ -13,6 +13,7 @@
 		CE250BC71AB6839B0062CD23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE250BC61AB6839B0062CD23 /* Images.xcassets */; };
 		CE250BCA1AB6839B0062CD23 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE250BC81AB6839B0062CD23 /* LaunchScreen.xib */; };
 		CE250BD61AB6839C0062CD23 /* DudeWhere_sMyCarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE250BD51AB6839C0062CD23 /* DudeWhere_sMyCarTests.swift */; };
+		CE250BE21AB693A00062CD23 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE250BE11AB693A00062CD23 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		CE250BCF1AB6839B0062CD23 /* DudeWhere'sMyCarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DudeWhere'sMyCarTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE250BD41AB6839C0062CD23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE250BD51AB6839C0062CD23 /* DudeWhere_sMyCarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DudeWhere_sMyCarTests.swift; sourceTree = "<group>"; };
+		CE250BE11AB693A00062CD23 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE250BE21AB693A00062CD23 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +62,7 @@
 		CE250BB11AB6839B0062CD23 = {
 			isa = PBXGroup;
 			children = (
+				CE250BE11AB693A00062CD23 /* CoreLocation.framework */,
 				CE250BBC1AB6839B0062CD23 /* DudeWhere'sMyCar */,
 				CE250BD21AB6839C0062CD23 /* DudeWhere'sMyCarTests */,
 				CE250BBB1AB6839B0062CD23 /* Products */,
@@ -405,6 +409,7 @@
 				CE250BDB1AB6839C0062CD23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE250BDC1AB6839C0062CD23 /* Build configuration list for PBXNativeTarget "DudeWhere'sMyCarTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				CE250BDE1AB6839C0062CD23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
