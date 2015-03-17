@@ -14,10 +14,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     
     @IBOutlet weak var map: MKMapView!
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var userLocation: UILabel!
+    @IBOutlet weak var savedLocation: UILabel!
     
     var manager: CLLocationManager!
     var myLocations: [CLLocation] = []
+    
+    var carAnnotation: MKAnnotation!
+    var userAnnotation: MKAnnotation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +35,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         map.delegate = self
         map.mapType = MKMapType.Standard
         map.showsUserLocation = true
+        
+        userAnnotation = SpotAnnotation(coordinate: manager.location.coordinate)
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,8 +44,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func saveLocation(sender: AnyObject) {
+        var location = manager.location
+        savedLocation.text = location.description
+        carAnnotation = SpotAnnotation(coordinate: location.coordinate)
+    }
+    
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        label.text = "\(locations[0])"
+        // NEED TO FIX KEY/VALUE ISSUE
+        //userAnnotation.setCoordinate!(manager.location.coordinate)
+        userLocation.text = manager.location.description
+        
+        /*label.text = "\(locations[0])"
         myLocations.append(locations[0] as CLLocation)
         
         let spanX = 0.007
@@ -54,10 +70,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             var a = [c1, c2]
             var polyLine = MKPolyline(coordinates: &a, count: a.count)
             map.addOverlay(polyLine)
-        }
+        }*/
     }
     
-    func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
+    /*func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
         if (overlay is MKPolyline) {
             var polyLineRenderer = MKPolylineRenderer(overlay: overlay)
             polyLineRenderer.strokeColor = UIColor.blueColor()
@@ -65,6 +81,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             return polyLineRenderer
         }
         return nil
-    }
+    }*/
 }
 

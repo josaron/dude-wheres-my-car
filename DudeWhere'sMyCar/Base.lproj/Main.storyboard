@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,32 +19,60 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0Hu-0D-wkw">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="450"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hji-oy-lJy">
-                                <rect key="frame" x="16" y="458" width="568" height="122"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hji-oy-lJy">
+                                <rect key="frame" x="340" y="450" width="260" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="122" id="Noe-Gk-2SZ"/>
+                                    <constraint firstAttribute="width" constant="260" id="NFQ-sE-YWV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULd-55-chC">
+                                <rect key="frame" x="0.0" y="512" width="199" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="nHC-wG-Phy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="so8-Sf-PtL">
+                                <rect key="frame" x="0.0" y="450" width="199" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="UYv-LD-d6Y"/>
+                                    <constraint firstAttribute="width" constant="199" id="eJk-Dv-m0e"/>
+                                </constraints>
+                                <state key="normal" title="Save Location">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveLocation:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="u4Y-5e-aRq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="hji-oy-lJy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="7BZ-sf-wPf"/>
-                            <constraint firstItem="hji-oy-lJy" firstAttribute="centerX" secondItem="0Hu-0D-wkw" secondAttribute="centerX" id="Hdc-ok-DTP"/>
-                            <constraint firstItem="0Hu-0D-wkw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="R79-YQ-4jO"/>
-                            <constraint firstItem="hji-oy-lJy" firstAttribute="top" secondItem="0Hu-0D-wkw" secondAttribute="bottom" constant="8" symbolic="YES" id="XBr-V3-bXU"/>
-                            <constraint firstAttribute="bottom" secondItem="hji-oy-lJy" secondAttribute="bottom" constant="20" symbolic="YES" id="f4c-nV-UIB"/>
-                            <constraint firstAttribute="trailing" secondItem="0Hu-0D-wkw" secondAttribute="trailing" id="o5B-Si-OM5"/>
-                            <constraint firstItem="0Hu-0D-wkw" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="ylY-bb-12D"/>
+                            <constraint firstItem="ULd-55-chC" firstAttribute="top" secondItem="so8-Sf-PtL" secondAttribute="bottom" constant="8" symbolic="YES" id="4VI-PW-tEy"/>
+                            <constraint firstItem="ULd-55-chC" firstAttribute="baseline" secondItem="hji-oy-lJy" secondAttribute="baseline" id="BGU-8y-WMG"/>
+                            <constraint firstItem="so8-Sf-PtL" firstAttribute="top" secondItem="0Hu-0D-wkw" secondAttribute="bottom" id="Ble-lw-VeU"/>
+                            <constraint firstAttribute="trailing" secondItem="hji-oy-lJy" secondAttribute="trailing" id="HbK-HI-L5S"/>
+                            <constraint firstItem="so8-Sf-PtL" firstAttribute="leading" secondItem="ULd-55-chC" secondAttribute="leading" id="JHA-Cf-uar"/>
+                            <constraint firstItem="so8-Sf-PtL" firstAttribute="top" secondItem="hji-oy-lJy" secondAttribute="top" id="Ywn-rh-FT4"/>
+                            <constraint firstItem="ULd-55-chC" firstAttribute="trailing" secondItem="so8-Sf-PtL" secondAttribute="trailing" id="e4l-EO-H4H"/>
+                            <constraint firstItem="ULd-55-chC" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="gO7-BP-OND"/>
+                            <constraint firstItem="ULd-55-chC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="umA-p0-bD2"/>
+                            <constraint firstItem="0Hu-0D-wkw" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="v6B-AL-jm0"/>
+                            <constraint firstItem="hji-oy-lJy" firstAttribute="trailing" secondItem="0Hu-0D-wkw" secondAttribute="trailing" id="w9W-GQ-MOa"/>
+                            <constraint firstItem="0Hu-0D-wkw" firstAttribute="leading" secondItem="so8-Sf-PtL" secondAttribute="leading" id="y6t-8Q-uPO"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
-                        <outlet property="label" destination="hji-oy-lJy" id="9Qf-KB-RDd"/>
                         <outlet property="map" destination="0Hu-0D-wkw" id="jlX-RN-tbM"/>
+                        <outlet property="savedLocation" destination="ULd-55-chC" id="Pfm-Zg-aGp"/>
+                        <outlet property="userLocation" destination="hji-oy-lJy" id="xER-Nt-jXT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

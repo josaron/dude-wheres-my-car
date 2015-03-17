@@ -14,6 +14,7 @@
 		CE250BCA1AB6839B0062CD23 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE250BC81AB6839B0062CD23 /* LaunchScreen.xib */; };
 		CE250BD61AB6839C0062CD23 /* DudeWhere_sMyCarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE250BD51AB6839C0062CD23 /* DudeWhere_sMyCarTests.swift */; };
 		CE250BE21AB693A00062CD23 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE250BE11AB693A00062CD23 /* CoreLocation.framework */; };
+		CE4CB3651AB7E9930049188E /* SpotAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4CB3641AB7E9930049188E /* SpotAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		CE250BD41AB6839C0062CD23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE250BD51AB6839C0062CD23 /* DudeWhere_sMyCarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DudeWhere_sMyCarTests.swift; sourceTree = "<group>"; };
 		CE250BE11AB693A00062CD23 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CE4CB3641AB7E9930049188E /* SpotAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		CE250BB11AB6839B0062CD23 = {
 			isa = PBXGroup;
 			children = (
+				CE4CB3641AB7E9930049188E /* SpotAnnotation.swift */,
 				CE250BE11AB693A00062CD23 /* CoreLocation.framework */,
 				CE250BBC1AB6839B0062CD23 /* DudeWhere'sMyCar */,
 				CE250BD21AB6839C0062CD23 /* DudeWhere'sMyCarTests */,
@@ -218,6 +221,7 @@
 			files = (
 				CE250BC21AB6839B0062CD23 /* ViewController.swift in Sources */,
 				CE250BC01AB6839B0062CD23 /* AppDelegate.swift in Sources */,
+				CE4CB3651AB7E9930049188E /* SpotAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
